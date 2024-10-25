@@ -1,0 +1,99 @@
+/* Asegúrate de que todo el contenido esté dentro de la pantalla del dispositivo */
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    background: #1a0f2e;
+    background-image: radial-gradient(#2a1f3e 1px, transparent 1px);
+    background-size: 30px 30px;
+    overflow: hidden;
+    font-family: 'Creepster', cursive;
+  }
+  
+  /* Asegura que el canvas ocupe toda la pantalla */
+  #gameCanvas {
+    width: 100vw;
+    height: 100vh;
+    cursor: crosshair;
+  }
+  
+  /* Hacemos que el texto y los indicadores se ajusten en móviles */
+  .score, .lives {
+    position: fixed;
+    top: 10px;
+    color: #fff;
+    font-size: 5vw; /* Ajusta el tamaño de fuente en función del ancho de la pantalla */
+    text-shadow: 2px 2px 4px black;
+    z-index: 100;
+  }
+  
+  .score { left: 10px; }
+  .lives { right: 10px; color: #ff3366; }
+  
+  /* Ajustamos el tamaño de los fantasmas para pantallas pequeñas */
+  .ghost {
+    position: absolute;
+    width: 12vw; /* Escala el tamaño en función de la pantalla */
+    height: 12vw;
+    cursor: pointer;
+    transition: transform 0.2s;
+    z-index: 1;
+  }
+  
+  .ghost:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Aseguramos que el panel de "Game Over" también sea responsive */
+  .game-over {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0,0,0,0.9);
+    padding: 5vw; /* Ajusta el padding para móviles */
+    border-radius: 15px;
+    color: #ff3366;
+    text-align: center;
+    z-index: 1000;
+    border: 2px solid #ff3366;
+    width: 80vw; /* Limita el ancho en móviles */
+  }
+  
+  /* Botón responsive */
+  .restart-btn {
+    background: #ff3366;
+    border: none;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 20px;
+    font-family: 'Creepster', cursive;
+    font-size: 6vw; /* Ajusta el tamaño de la fuente */
+    transition: all 0.3s;
+  }
+  
+  .restart-btn:hover {
+    background: #ff5588;
+    transform: scale(1.1);
+  }
+  
+  /* Corazones (vidas) responsivos */
+  .heart {
+    color: #ff3366;
+    font-size: 6vw; /* Ajusta el tamaño de los corazones */
+    margin: 0 5px;
+  }
+  
+  /* Animación responsive */
+  @keyframes float {
+    0% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-10px) rotate(5deg); } /* Ajusta el tamaño del movimiento para pantallas pequeñas */
+    100% { transform: translateY(0px) rotate(0deg); }
+  }
+  
