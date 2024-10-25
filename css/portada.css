@@ -11,44 +11,68 @@ body {
     text-align: center;
 }
 
-a{
-   text-decoration: none; 
-   color: white;
-   cursor: pointer;
-   font-size: xx-large;
+a {
+    text-decoration: none; 
+    color: white;
+    cursor: pointer;
+    font-size: 2rem; /* Usar unidades rem para escalabilidad */
 }
 
-.imagen{
-    width: 300px;
-    height: 300px;
+.imagen {
+    width: 80vw; /* Ajustar el tamaño según el viewport */
+    max-width: 300px; /* Limitar el tamaño máximo */
+    height: auto; /* Mantener la proporción de la imagen */
 }
 
-.button{
+.button {
     background: white;
     margin: 0;
-    border-radius: 100%;
-    -webkit-border-radius: 100%;
-    -moz-border-radius: 100%;
-    -ms-border-radius: 100%;
-    -o-border-radius: 100%;
+    border-radius: 50%; /* Simplificado */
+    padding: 1rem; /* Espaciado interno para mejorar el clic */
 }
 
-.footer{
+.footer {
     position: absolute;
     bottom: 0;
     width: 100%;
 }
 
-.footera{
+.footera {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-right: 30px;
+    margin-right: 2rem; /* Usar rem para responsividad */
 }
 
-.insta{
-    width: 40px;
-    height: 40px;
-    margin-left: 10px;
+.insta {
+    width: 10vw; /* Ajustar según el viewport */
+    max-width: 40px; /* Limitar el tamaño máximo */
+    height: auto; /* Mantener la proporción */
+    margin-left: 1rem; /* Usar rem para espaciado */
+}
+
+/* Media Queries para ajustar estilos en pantallas más pequeñas */
+@media (max-width: 768px) {
+    a {
+        font-size: 1.5rem; /* Reducir tamaño de fuente */
+    }
+
+    .button {
+        padding: 0.8rem; /* Ajustar espaciado interno */
+    }
+    
+    .footera {
+        margin-right: 1rem; /* Ajustar el margen en pantallas pequeñas */
+    }
+}
+
+@media (max-width: 480px) {
+    a {
+        font-size: 1.2rem; /* Aún más pequeño en pantallas muy pequeñas */
+    }
+
+    .imagen {
+        width: 90vw; /* Ajustar tamaño de la imagen en pantallas pequeñas */
+    }
 }
