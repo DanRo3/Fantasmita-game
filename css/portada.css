@@ -1,0 +1,54 @@
+body {
+    background-color: rgb(58, 10, 78);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Creepster', cursive;
+    color: white;
+    text-align: center;
+}
+
+a{
+   text-decoration: none; 
+   color: white;
+   cursor: pointer;
+   font-size: xx-large;
+}
+
+.imagen{
+    width: 300px;
+    height: 300px;
+}
+
+.button{
+    background: white;
+    margin: 0;
+    border-radius: 100%;
+    -webkit-border-radius: 100%;
+    -moz-border-radius: 100%;
+    -ms-border-radius: 100%;
+    -o-border-radius: 100%;
+}
+
+.footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.footera{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-right: 30px;
+}
+
+.insta{
+    width: 40px;
+    height: 40px;
+    margin-left: 10px;
+}
